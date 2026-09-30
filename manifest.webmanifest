@@ -1,0 +1,32 @@
+{
+  "name": "GLOVTA — Global Vision Talent Accelerators",
+  "short_name": "GLOVTA",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#031229",
+  "theme_color": "#031229",
+  "description": "Hub inclusivo de empleabilidad, formación y soluciones tecnológicas.",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "id": "./",
+  "scope": "./",
+  "lang": "es"
+}

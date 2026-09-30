@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GLOVTA Admin — Demo</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <style>
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:#eef3f8;color:#0a2345}
+    header{height:76px;background:#031229;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 28px;border-bottom:1px solid #174d84}
+    header div{display:flex;align-items:center;gap:10px}header img{width:42px}header a{color:#9feaff;text-decoration:none}
+    main{display:grid;grid-template-columns:240px 1fr;min-height:calc(100vh - 76px)}
+    nav{background:#061b3a;color:#dbeafe;padding:24px 16px}nav a{display:block;padding:10px 12px;border-radius:9px;color:inherit;text-decoration:none;margin-bottom:4px}nav a:hover{background:#0a2d5d}
+    .content{padding:28px}.kicker{font-size:.72rem;letter-spacing:.18em;color:#087cb1;font-weight:900}.content h1{margin:6px 0 24px;font-size:2.1rem}
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.metric{background:#fff;border:1px solid #d7e4ef;border-radius:14px;padding:18px}.metric span{display:block;color:#62778e;font-size:.8rem}.metric strong{display:block;font-size:1.8rem;margin-top:6px}
+    .panel{margin-top:18px;background:#fff;border:1px solid #d7e4ef;border-radius:14px;padding:20px}.panel h2{margin-top:0}.empty{color:#6a7d90}
+    table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px;border-bottom:1px solid #e0e9f0;font-size:.85rem}th{color:#60758d}
+    @media(max-width:850px){main{grid-template-columns:1fr}nav{display:none}.metrics{grid-template-columns:1fr 1fr}}@media(max-width:520px){.metrics{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header>
+  <div><img src="assets/logo.svg" alt=""><strong>GLOVTA Admin</strong><small>Demo local</small></div>
+  <a href="index.html">Volver al sitio</a>
+</header>
+<main>
+  <nav aria-label="Administración demo">
+    <a href="#dashboard">Dashboard</a><a href="#usuarios">Usuarios</a><a href="#productos">Productos</a><a href="#pedidos">Pedidos</a><a href="#leads">Leads B2B</a><a href="#agenda">Agenda</a><a href="#integraciones">Integraciones</a>
+  </nav>
+  <section class="content" id="dashboard">
+    <p class="kicker">PANEL DEMOSTRATIVO</p>
+    <h1>Estado del ecosistema GLOVTA</h1>
+    <div class="metrics">
+      <article class="metric"><span>Career Passports locales</span><strong id="mPassports">0</strong></article>
+      <article class="metric"><span>Productos en carrito</span><strong id="mCart">0</strong></article>
+      <article class="metric"><span>Leads B2B</span><strong id="mLeads">0</strong></article>
+      <article class="metric"><span>Reuniones</span><strong id="mAppointments">0</strong></article>
+    </div>
+    <div class="panel" id="usuarios">
+      <h2>Usuarios</h2>
+      <p class="empty">Módulo planificado para la etapa con autenticación y Supabase. No hay usuarios reales en este frontend demo.</p>
+    </div>
+    <div class="panel" id="productos">
+      <h2>Productos</h2>
+      <p class="empty">El catálogo visible en la Home funciona en modo demo. La administración persistente de productos se implementará con backend y Supabase.</p>
+    </div>
+    <div class="panel" id="pedidos">
+      <h2>Pedidos</h2>
+      <p class="empty">No hay checkout real todavía. Los pedidos persistentes se implementarán junto con backend, Supabase y Mercado Pago.</p>
+    </div>
+    <div class="panel" id="leads">
+      <h2>Leads B2B guardados en este navegador</h2>
+      <div id="leadTable"></div>
+    </div>
+    <div class="panel" id="agenda">
+      <h2>Agenda GLOVTA</h2>
+      <div id="appointmentTable"></div>
+    </div>
+    <div class="panel" id="integraciones">
+      <h2>Estado de integraciones</h2>
+      <table><thead><tr><th>Módulo</th><th>Estado en este ZIP</th></tr></thead><tbody>
+        <tr><td>Supabase</td><td>Pendiente de conexión</td></tr>
+        <tr><td>Mercado Pago</td><td>Checkout demo, sin cobro real</td></tr>
+        <tr><td>Adzuna / Jooble / Remotive</td><td>Pendiente de backend y credenciales</td></tr>
+        <tr><td>Firebase</td><td>Reservado para Analytics / notificaciones</td></tr>
+      </tbody></table>
+    </div>
+  </section>
+</main>
+<script>
+  function readJSON(key, fallback) {
+    try {
+      const raw = localStorage.getItem(key);
+      return raw ? JSON.parse(raw) : fallback;
+    } catch (error) {
+      console.warn(`GLOVTA Admin: no se pudo leer ${key}; se usa un valor seguro.`, error);
+      return fallback;
+    }
+  }
+  const leads = readJSON("glovta-leads", []);
+  const cart = readJSON("glovta-cart", []);
+  const appointments = readJSON("glovta-appointments", []);
+  document.getElementById("mPassports").textContent = localStorage.getItem("glovta-passport") ? "1" : "0";
+  document.getElementById("mCart").textContent = String(cart.length);
+  document.getElementById("mLeads").textContent = String(leads.length);
+  document.getElementById("mAppointments").textContent = String(appointments.length);
+  const target = document.getElementById("leadTable");
+  if (!leads.length) {
+    target.innerHTML = '<p class="empty">Todavía no hay leads demo. Completá el formulario B2B en la Home.</p>';
+  } else {
+    const esc = v => { const d=document.createElement("div"); d.textContent=v||""; return d.innerHTML; };
+    target.innerHTML = '<table><thead><tr><th>Nombre</th><th>Email</th><th>Servicio</th><th>Estado</th></tr></thead><tbody>' +
+      leads.map(l => '<tr><td>'+esc(l.name)+'</td><td>'+esc(l.email)+'</td><td>'+esc(l.service)+'</td><td>'+esc(l.status)+'</td></tr>').join("") +
+      '</tbody></table>';
+  }
+
+  const appointmentTarget = document.getElementById("appointmentTable");
+  const esc2 = v => { const d=document.createElement("div"); d.textContent=v||""; return d.innerHTML; };
+  if (!appointments.length) {
+    appointmentTarget.innerHTML = '<p class="empty">Todavía no hay reuniones demo reservadas.</p>';
+  } else {
+    appointmentTarget.innerHTML = '<table><thead><tr><th>Fecha</th><th>Hora</th><th>Tipo</th><th>Nombre</th><th>Modalidad</th><th>Estado</th></tr></thead><tbody>' +
+      appointments.map(a => '<tr><td>'+esc2(a.date)+'</td><td>'+esc2(a.time)+'</td><td>'+esc2(a.type)+'</td><td>'+esc2(a.name)+'</td><td>'+esc2(a.mode)+'</td><td>'+esc2(a.status)+'</td></tr>').join("") +
+      '</tbody></table>';
+  }
+</script>
+</body>
+</html>

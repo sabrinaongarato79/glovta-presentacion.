@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#031229">
+  <meta name="description" content="GLOVTA — Global Vision Talent Accelerators. Hub inclusivo de empleabilidad, formación y soluciones tecnológicas.">
+  <title>GLOVTA — Global Vision Talent Accelerators</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="GLOVTA, inicio">
+      <img src="assets/logo.svg" alt="" width="52" height="52">
+      <span class="brand-copy">
+        <strong>GLOVTA</strong>
+        <small>Global Vision Talent Accelerators</small>
+      </span>
+    </a>
+
+    <button class="mobile-menu" id="mobileMenu" aria-expanded="false" aria-controls="mainNav">Menú</button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+      <a href="#personas">Personas</a>
+      <a href="#empresas">Empresas</a>
+      <a href="#oportunidades">Oportunidades</a>
+      <a href="#formacion">Formación</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#agenda">Agenda</a>
+    </nav>
+
+    <div class="header-tools" aria-label="Herramientas de accesibilidad">
+      <button type="button" class="tool-btn" id="fontDown" aria-label="Reducir tamaño de texto">A−</button>
+      <button type="button" class="tool-btn" id="fontReset" aria-label="Restablecer tamaño de texto">A</button>
+      <button type="button" class="tool-btn" id="fontUp" aria-label="Aumentar tamaño de texto">A+</button>
+      <button type="button" class="tool-btn contrast-btn" id="contrastToggle" aria-pressed="false">◐ <span class="sr-only">Alternar alto contraste</span></button>
+      <a class="header-cta" href="#oportunidades">Explorar oportunidades <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">TALENTO SIN FRONTERAS</p>
+          <h1>Tu próximo paso.<br><span>Sin fronteras.</span></h1>
+          <p class="hero-lead">Más oportunidades para trayectorias diversas. Más tecnología para hacer crecer tu negocio.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#oportunidades">Explorar oportunidades <span aria-hidden="true">→</span></a>
+            <a class="btn btn-outline" href="#soluciones">Ver soluciones</a>
+          </div>
+
+          <p class="no-register"><span aria-hidden="true">◎</span> Explorá sin registro. Descubrí lo que viene para vos.</p>
+
+          </div>
+
+      </div>
+
+      <div class="pillar-row">
+        <a href="#personas" class="pillar"><span class="pillar-icon">◎</span><div><b>Talento global</b><small>Sin barreras.</small></div><i>→</i></a>
+        <a href="#oportunidades" class="pillar"><span class="pillar-icon">▣</span><div><b>Oportunidades</b><small>En todo el mundo.</small></div><i>→</i></a>
+        <a href="#formacion" class="pillar"><span class="pillar-icon">◇</span><div><b>Formación</b><small>Para crecer.</small></div><i>→</i></a>
+        <a href="#empresas" class="pillar"><span class="pillar-icon">▥</span><div><b>Empresas</b><small>Soluciones con impacto.</small></div><i>→</i></a>
+      </div>
+
+      <div class="brand-principles"><span>VISIÓN GLOBAL. SOLUCIONES CONCRETAS.</span><p>Talento <i>↗</i> Tecnología <i>↗</i> Negocios</p></div>
+    </section>
+
+    <section class="section section-light" id="personas"><details class="section-disclosure"><summary><span>Career Passport · Perfil profesional en tres pasos</span><h2>Tu talento, con dirección.</h2><b aria-hidden="true">↗</b></summary><div class="disclosure-content">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow dark">PARA PERSONAS</p>
+          <h2>Tu perfil. Tus brechas. Tu próximo paso.</h2>
+        </div>
+        <p>GLOVTA organiza la experiencia en un recorrido corto y comprensible, sin obligarte a recorrer múltiples herramientas para entender dónde estás y qué conviene mejorar.</p>
+      </div>
+
+      <div class="journey">
+        <button class="journey-card is-active" type="button" data-open="passportDialog">
+          <span>01</span><b>Career Passport</b><small>Perfil profesional en 3 pasos</small>
+        </button>
+        <article class="journey-card"><span>02</span><b>Career Score</b><small>Fortalezas y áreas de mejora</small></article>
+        <article class="journey-card"><span>03</span><b>Matching</b><small>Coincidencias explicadas</small></article>
+        <article class="journey-card"><span>04</span><b>Learning Path</b><small>Ruta de aprendizaje</small></article>
+      </div>
+
+      <div class="score-panel">
+        <div class="score-ring" aria-label="Career Score de ejemplo 78 sobre 100"><strong>78</strong><span>/100</span></div>
+        <div>
+          <p class="mini-label">EJEMPLO DE RESULTADO</p>
+          <h3>Tenés una base sólida para roles de análisis.</h3>
+          <p>El sistema explica por qué recomienda una oportunidad y qué habilidad conviene desarrollar antes de postular.</p>
+          <div class="skill-tags"><span>Excel</span><span>UAT</span><span>SQL</span><span>Inglés</span></div>
+        </div>
+      </div>
+    </div></details></section>
+
+    <section class="section section-dark" id="oportunidades"><details class="section-disclosure"><summary><span>Buscador demo · Exploración sin registro</span><h2>Encontrá tu próxima oportunidad.</h2><b aria-hidden="true">↗</b></summary><div class="disclosure-content">
+      <div class="section-head dark-head">
+        <div><p class="eyebrow">OPORTUNIDADES</p><h2>Buscá una vez. Elegí dónde continuar.</h2></div>
+        <p>Las fuentes externas se muestran con transparencia. Cuando una API no está disponible, GLOVTA redirige al portal oficial en lugar de simular una integración.</p>
+      </div>
+
+      <form class="job-search" id="jobSearchForm">
+        <label for="jobQuery">Puesto, habilidad o palabra clave</label>
+        <div class="job-search-row">
+          <input id="jobQuery" name="q" placeholder="Ej. Business Analyst" autocomplete="off">
+          <button class="btn btn-primary" type="submit">Buscar</button>
+        </div>
+        <p id="searchStatus" class="status" aria-live="polite">Modo demo activo.</p>
+      </form>
+
+      <div class="opportunity-grid" id="opportunityGrid"></div>
+
+      <div class="external-source-row" aria-label="Portales externos">
+        <a href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://www.zonajobs.com.ar/" target="_blank" rel="noopener">ZonaJobs ↗</a>
+        <a href="https://www.bumeran.com.ar/" target="_blank" rel="noopener">Bumeran ↗</a>
+        <a href="https://ar.computrabajo.com/" target="_blank" rel="noopener">Computrabajo ↗</a>
+        <a href="https://ar.indeed.com/" target="_blank" rel="noopener">Indeed ↗</a>
+        <a href="https://www.workana.com/" target="_blank" rel="noopener">Workana ↗</a>
+        <a href="https://www.freelancer.com/" target="_blank" rel="noopener">Freelancer ↗</a>
+        <a href="https://remotive.com/remote-jobs" target="_blank" rel="noopener">Remotive ↗</a>
+      </div>
+    </div></details></section>
+
+    <section class="section section-light" id="formacion"><details class="section-disclosure"><summary><span>Cursos y recursos · Catálogo demo</span><h2>Aprendé para dar el próximo paso.</h2><b aria-hidden="true">↗</b></summary><div class="disclosure-content">
+      <div class="section-head">
+        <div><p class="eyebrow dark">FORMACIÓN</p><h2>Aprendizaje conectado con una necesidad concreta.</h2></div>
+        <p>Los productos propios de GLOVTA se distinguen de los recursos externos. No presentamos a Google o Coursera como socios ni revendemos sus cursos.</p>
+      </div>
+
+      <div class="course-layout">
+        <div class="course-grid" id="courseGrid"></div>
+        <aside class="learning-aside">
+          <p class="mini-label">RECURSOS EXTERNOS</p>
+          <h3>Explorá también otras plataformas.</h3>
+          <a href="https://grow.google/intl/es/google-career-certificates/" target="_blank" rel="noopener">Google Career Certificates ↗</a>
+          <a href="https://www.coursera.org/" target="_blank" rel="noopener">Coursera ↗</a>
+          <p class="legal-note">Enlaces externos de referencia. No implican asociación comercial con GLOVTA.</p>
+        </aside>
+      </div>
+    </div></details></section>
+
+    <section class="section section-business" id="empresas">
+      <div class="business-copy">
+        <p class="eyebrow">GLOVTA FOR BUSINESS</p>
+        <h2>Tecnología que trabaja<br>para tu negocio.</h2>
+        <p>De una web que presenta tu marca a un sistema que organiza tu operación. Diseñamos el próximo paso con vos.</p>
+        <div class="hero-actions business-actions"><a href="#contacto" class="btn btn-light">Contanos tu proyecto</a><a href="#agenda" class="btn btn-outline">Agendar reunión</a></div>
+      </div>
+
+      <div class="business-cards" id="soluciones">
+        <a class="industry-card" href="#contacto" data-service="Inmobiliarias"><span class="industry-number">01 / REAL ESTATE</span><div class="industry-art property-art" aria-hidden="true"><i></i><i></i><i></i></div><h3>Inmobiliarias</h3><p>Propiedades que se encuentran. Consultas que avanzan.</p><ul><li>Catálogo con filtros</li><li>Consultas por WhatsApp</li><li>Agenda de visitas</li></ul><b>Desarrollemos tu plataforma ↗</b></a>
+        <a class="industry-card" href="#contacto" data-service="Comercios"><span class="industry-number">02 / COMMERCE</span><div class="industry-art commerce-art" aria-hidden="true"><i></i><i></i><i></i></div><h3>Comercios</h3><p>Tu negocio conectado, de la vidriera a la operación.</p><ul><li>Catálogo y tienda online</li><li>Gestión de stock y ventas</li><li>Panel de pedidos</li></ul><b>Impulsá tu negocio ↗</b></a>
+        <a class="industry-card" href="#contacto" data-service="Gestión financiera"><span class="industry-number">03 / BUSINESS FINANCE</span><div class="industry-art finance-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Gestión financiera</h3><p>Información clara para entender tu operación.</p><ul><li>Control de ingresos y gastos</li><li>Cuentas por cobrar y pagar</li><li>Reportes y flujo de caja</li></ul><b>Diseñemos tu sistema ↗</b></a>
+      </div>
+      <div class="capabilities" aria-label="Otras soluciones"><span>Ecommerce</span><span>Automatización de procesos</span><span>Webs accesibles</span><span>Datos y reportes</span></div><p class="offer-note">Propuestas de desarrollo a medida. Alcance e integraciones a definir en cada proyecto.</p>
+    </section>
+
+
+    <section class="section section-agenda" id="agenda"><details class="section-disclosure"><summary><span>Agenda de reuniones · Reserva local demo</span><h2>Conversemos sobre tu próximo paso.</h2><b aria-hidden="true">↗</b></summary><div class="disclosure-content">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow dark">AGENDA GLOVTA</p>
+          <h2>Convertí una consulta en una reunión.</h2>
+        </div>
+        <p>Personas y empresas pueden reservar una sesión. En este ZIP la reserva funciona en modo demo local; la integración real con Google Calendar y Google Meet queda preparada para el backend.</p>
+      </div>
+
+      <div class="agenda-layout">
+        <div class="calendar-panel">
+          <div class="calendar-toolbar">
+            <button class="tool-btn agenda-tool" id="prevMonth" type="button" aria-label="Mes anterior">←</button>
+            <h3 id="calendarTitle">Calendario</h3>
+            <button class="tool-btn agenda-tool" id="nextMonth" type="button" aria-label="Mes siguiente">→</button>
+          </div>
+          <div class="calendar-weekdays" aria-hidden="true">
+            <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+          </div>
+          <div id="calendarGrid" class="calendar-grid" role="grid" aria-label="Calendario de reservas"></div>
+          <p class="calendar-help">Elegí una fecha futura y luego un horario disponible.</p>
+        </div>
+
+        <form class="appointment-form" id="appointmentForm">
+          <p class="mini-label">RESERVAR SESIÓN</p>
+          <h3>Agendá una reunión con GLOVTA</h3>
+
+          <label>Tipo de reunión
+            <select name="type" required>
+              <option value="Consulta B2B">Consulta B2B</option>
+              <option value="Orientación laboral">Orientación laboral</option>
+              <option value="Revisión de CV">Revisión de CV</option>
+              <option value="Preparación de entrevista">Preparación de entrevista</option>
+            </select>
+          </label>
+
+          <label>Fecha seleccionada
+            <input id="appointmentDate" name="date" readonly required placeholder="Elegí una fecha en el calendario">
+          </label>
+
+          <label>Horario
+            <select id="appointmentTime" name="time" required>
+              <option value="">Elegí un horario</option>
+              <option>10:00</option>
+              <option>11:30</option>
+              <option>15:00</option>
+              <option>16:30</option>
+              <option>18:00</option>
+            </select>
+          </label>
+
+          <label>Nombre
+            <input name="name" required>
+          </label>
+
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+
+          <label>Modalidad
+            <select name="mode">
+              <option value="Google Meet">Google Meet</option>
+              <option value="A coordinar">A coordinar</option>
+            </select>
+          </label>
+
+          <button class="btn btn-primary" type="submit">Reservar reunión</button>
+          <p id="appointmentStatus" class="status dark-status" aria-live="polite"></p>
+          <p class="legal-note">Demo local: la reserva se guarda en este navegador. El enlace de Google Meet no se inventa; en producción se crea mediante Google Calendar desde el backend autorizado.</p>
+        </form>
+      </div>
+    </div></details></section>
+
+    <section class="section section-light" id="planes"><details class="section-disclosure"><summary><span>Free y Premium · Experiencia demostrativa</span><h2>Elegí cómo avanzar.</h2><b aria-hidden="true">↗</b></summary><div class="disclosure-content">
+      <div class="section-head">
+        <div><p class="eyebrow dark">FREE + PREMIUM</p><h2>Gratis para explorar. Premium cuando aporta valor real.</h2></div>
+        <p>El acceso a oportunidades no queda bloqueado detrás de una suscripción. Premium suma herramientas de personalización y acompañamiento.</p>
+      </div>
+      <div class="plans">
+        <article class="plan-card">
+          <p class="mini-label">GLOVTA FREE</p>
+          <h3>$0</h3>
+          <ul><li>Explorar oportunidades</li><li>Career Passport básico</li><li>Career Score</li><li>Recursos iniciales</li></ul>
+          <a class="btn btn-outline-dark" href="#oportunidades">Empezar</a>
+        </article>
+        <article class="plan-card premium">
+          <p class="mini-label">GLOVTA PREMIUM</p>
+          <h3>Precio a validar</h3>
+          <ul><li>Glovta AI con límites de uso</li><li>Matching avanzado</li><li>Preparación de entrevistas</li><li>Learning Path personalizado</li></ul>
+          <button class="btn btn-primary" id="premiumDemo" type="button">Ver experiencia Premium</button>
+        </article>
+      </div>
+    </div></details></section>
+
+    <section class="section section-dark compact" id="contacto">
+      <div class="section-head dark-head">
+        <div><p class="eyebrow">CONTACTO B2B</p><h2>Convertí una necesidad en un proyecto.</h2></div>
+        <p><strong>contacto@glovta.example</strong><br><small>Correo de demostración — no recibe mensajes.</small><br>Este formulario guarda las consultas solo en este navegador (modo demo).</p>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <label>Nombre<input name="name" required></label>
+        <label>Email<input name="email" type="email" required></label>
+        <label>Servicio<select name="service"><option>Inmobiliarias</option><option>Comercios</option><option>Gestión financiera</option><option>Web & Ecommerce</option><option>Ecommerce</option><option>Automatización de procesos</option><option>Software</option><option>Automatización & IA</option><option>Datos & Cloud</option><option>Accesibilidad</option></select></label>
+        <label class="wide">Mensaje<textarea name="message" rows="3" required></textarea></label>
+        <button class="btn btn-primary" type="submit">Enviar consulta</button>
+        <p id="contactStatus" class="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <button class="cart-fab" id="openCart" type="button" aria-label="Abrir carrito">Carrito <span id="cartCount">0</span></button>
+
+  <aside class="cart" id="cart" aria-hidden="true" aria-label="Carrito de productos GLOVTA">
+    <div class="cart-head"><strong>Carrito GLOVTA</strong><button class="tool-btn" id="closeCart" type="button" aria-label="Cerrar carrito">×</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-total"><span>Total demo</span><strong id="cartTotal">$0</strong></div>
+    <button class="btn btn-primary" id="checkoutDemo" type="button">Continuar</button>
+    <p class="legal-note">Checkout de demostración. No procesa pagos reales.</p>
+  </aside>
+
+  <dialog id="passportDialog">
+    <form method="dialog" class="dialog-card" id="passportForm">
+      <button class="dialog-close" id="closePassport" type="button" aria-label="Cerrar Career Passport">×</button>
+      <p class="eyebrow dark">CAREER PASSPORT</p>
+      <h2>Creá tu perfil en 3 pasos.</h2>
+      <div class="step-indicator" aria-label="Paso actual"><span class="on">1</span><span>2</span><span>3</span></div>
+
+      <div class="passport-step" data-step="1">
+        <label>Objetivo profesional<input name="goal" required placeholder="Ej. Business Analyst"></label>
+        <label>País<input name="country" value="Argentina"></label>
+      </div>
+      <div class="passport-step" data-step="2" hidden>
+        <label>Habilidades principales<input name="skills" placeholder="SQL, Excel, UAT"></label>
+        <label>Idiomas<input name="languages" placeholder="Español, Inglés B2"></label>
+      </div>
+      <div class="passport-step" data-step="3" hidden>
+        <label>Experiencia / formación<textarea name="experience" rows="4" placeholder="Resumen breve"></textarea></label>
+        <p class="legal-note">Este demo se guarda solo en tu navegador.</p>
+      </div>
+
+      <div class="dialog-actions">
+        <button class="btn btn-outline-dark" type="button" id="prevStep">Atrás</button>
+        <button class="btn btn-primary" type="button" id="nextStep">Siguiente</button>
+        <button class="btn btn-primary" type="submit" id="savePassport" hidden>Guardar demo</button>
+      </div>
+      <p id="passportStatus" class="status" aria-live="polite"></p>
+    </form>
+  </dialog>
+
+  <dialog id="premiumDialog">
+    <form method="dialog" class="dialog-card">
+      <button class="dialog-close" value="cancel" aria-label="Cerrar">×</button>
+      <p class="eyebrow dark">PREMIUM</p>
+      <h2>Una capa de acompañamiento, no una barrera de entrada.</h2>
+      <p>En la versión comercial, Premium puede sumar IA bajo demanda, matching enriquecido, preparación de entrevistas y seguimiento.</p>
+      <button class="btn btn-primary" value="default">Entendido</button>
+    </form>
+  </dialog>
+
+  <footer>
+    <div><img src="assets/logo.svg" alt="" width="36" height="36"><strong>GLOVTA</strong><span>Global Vision Talent Accelerators</span></div>
+    <p>Talento sin fronteras.</p>
+    <a href="admin.html">Admin demo</a>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
